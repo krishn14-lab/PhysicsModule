@@ -14,7 +14,7 @@ A simple module containing functions and classes to build simple simulations or 
 List any software or tools needed before running this project:
 * [Python 3.x](https://www.python.org/)
 * Numpy: Install via terminal using pip
-  ''' bash
+  ``` bash
   pip install numpy
 
 ### Installation
