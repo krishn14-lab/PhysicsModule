@@ -21,3 +21,6 @@ List any software or tools needed before running this project:
 1. Clone the repository:
    ```bash
    git clone [https://github.com/krishn14-lab/PhysicsModule.git](https://github.com/krishn14-lab/PhysicsModule.git)
+
+   git clone [https://github.com/krishn14-lab/PhysicsModule.git](https://github.com/krishn14-lab/PhysicsModule.git)
+
