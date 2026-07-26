@@ -36,10 +36,12 @@ List any software or tools needed before running this project:
   ``` bash
   pip install matplotlib
 
-### Installation
+## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/krishn14-lab/PhysicsModule.git](https://github.com/your-username/your-repo.git)
+### 1. Clone the Repository
+Open your terminal and run the following command to clone the project:
+
+```bash
+git clone [https://github.com/krishn14-lab/PhysicsModule.git](https://github.com/krishn14-lab/PhysicsModule.git)
 
 
