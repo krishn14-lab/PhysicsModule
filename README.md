@@ -37,6 +37,10 @@ List any software or tools needed before running this project:
   ``` bash
   pip install matplotlib
 
+* ffmpeg Writer: INstall via terminal using pip
+  ``` bash
+  pip install ffmpeg-python
+
 ## Installation
 
 ### 1. Clone the Repository
