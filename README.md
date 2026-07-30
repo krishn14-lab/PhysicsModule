@@ -41,6 +41,17 @@ List any software or tools needed before running this project:
   ``` bash
   pip install ffmpeg-python
 
+### ⚠️ Note for Windows Users
+Do NOT use `pip install ffmpeg` or `pip install ffmpeg-python`. These packages 
+do not contain the actual FFmpeg program files required by Windows. 
+
+Instead, use one of the following working options:
+1. Run `pip install imageio[ffmpeg]` in your terminal.
+2. If using Anaconda, run `conda install -c conda-forge ffmpeg`.
+3. Alternatively, install it directly to Windows via command prompt:
+   `winget install Gyan.FFmpeg`
+
+
 ## Installation
 
 ### 1. Clone the Repository
