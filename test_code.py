@@ -2,7 +2,11 @@ import utils
 import numpy as np
 
 g_values = []
-fps = 50
+fps = 60
+duration = 10
+sim_scale = 5.8
+
+frame_count = fps*duration
 
 radius_E = 1000.0
 mass_E = 10000000.0
@@ -20,7 +24,7 @@ g_Sun = utils.Gravity.field(masses, 1)
 sx = np.array([Earth.pos[0], Sun.pos[0]])
 sy = np.array([Earth.pos[1], Sun.pos[1]])
 
-for i in range(1,1001):
+for i in range(1, frame_count+1):
 
     g_Earth.send(None)
     g_Sun.send(None)
@@ -31,11 +35,11 @@ for i in range(1,1001):
     net_g = g1 + g2
     net_g = net_g.T
 
-    Earth.update_pos(net_g[0], fps, log=True)
-    Sun.update_pos(net_g[1], fps, log=True)
+    Earth.update_pos(net_g[0], fps, log=True, scale=sim_scale)
+    Sun.update_pos(net_g[1], fps, log=True, scale=sim_scale)
     
     sx[0], sy[0] = Earth.pos
     sx[1], sy[1] = Sun.pos
 
 animation1 = utils.Animate([Earth, Sun])
-animation1.draw(1000, fps, save=True)
+animation1.draw(frame_count, fps, save=True)

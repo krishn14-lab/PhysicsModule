@@ -9,17 +9,18 @@ A simple module containing functions and classes to build simple simulations or 
 * Class system for easy modularity
 * Easy built-in animation using matplotlib.animation.FuncAnimation
 
-## Release v0.2.0 -
+## Release v0.2.1 -
 
 ### What's New!
-* Added animation class for ease of animation
-* In-built logging through the planet class
-* Note:- **Requires Matplotlib now. Instructions on downloading matplotlib below**
+* Exponential Scaling
+* Upto 20 planets can be now displayed (limited by color)
+* Note:- **Requires Matplotlib from v0.2.0 onwards. Instructions on downloading matplotlib below**
 
 ### Bug Fixes
 * Fixed an error in calculating Force, Potential and Potential Difference
 * Fixed timing issues
-* Older method which caused division by zero if y was zero, is abandoned. Uses r-hat now.
+* Fixed more than 2 planet animation error
+* Fixed Potential energy function in Gravity class
 
 ## Getting Started
 
