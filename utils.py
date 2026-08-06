@@ -117,10 +117,10 @@ class Gravity:
 class Planet:
     def __init__(self, mass, radius, pos: tuple, v: tuple):
     
-        self.mass = mass
-        self.radius = radius
-        self.pos = np.array(pos)
-        self.velocity = np.array(v)
+        self.mass = float(mass)
+        self.radius = float(radius)
+        self.pos = np.array(pos, dtype=np.float64)
+        self.velocity = np.array(v, dtype=np.float64)
         self.log = [np.copy(self.pos)]
 
     def update_pos(self, acceleration, fps: int = 24, log: bool = False, scale: float = 4):
