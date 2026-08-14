@@ -58,6 +58,6 @@ Instead, use one of the following working options:
 Open your terminal and run the following command to clone the project:
 
 ```bash
-git clone [https://github.com/krishn14-lab/PhysicsModule.git](https://github.com/krishn14-lab/PhysicsModule.git)
+git clone https://github.com/krishn14-lab/PhysicsModule.git
 
 
