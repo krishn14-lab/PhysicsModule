@@ -1,4 +1,4 @@
-import utils
+import gravitation
 import numpy as np
 
 g_values = []
@@ -17,14 +17,14 @@ radius_S = 50000.0
 mass_X = 12000000.0
 radius_X = 1500.0
 
-Earth = utils.Planet(mass_E, radius_E, pos=(5000.0, 0.0), v=(0.0, 0.005))
-Sun = utils.Planet(mass_S, radius_S, pos=(0.0,0.0), v=(0.0001,0.0))
-X = utils.Planet(mass_X, radius_X, pos=(-6000.0, 0.0), v=(0.0, 0.0035))
+Earth = gravitation.Planet(mass_E, radius_E, pos=(5000.0, 0.0), v=(0.0, 0.005))
+Sun = gravitation.Planet(mass_S, radius_S, pos=(0.0,0.0), v=(0.0001,0.0))
+X = gravitation.Planet(mass_X, radius_X, pos=(-6000.0, 0.0), v=(0.0, 0.0035))
 
 masses = np.array([Earth.mass, Sun.mass, X.mass])
-g_Earth = utils.Gravity.field(masses, 0)
-g_Sun = utils.Gravity.field(masses, 1)
-g_X = utils.Gravity.field(masses, 2)
+g_Earth = gravitation.Gravity.field(masses, 0)
+g_Sun = gravitation.Gravity.field(masses, 1)
+g_X = gravitation.Gravity.field(masses, 2)
 
 sx = np.array([Earth.pos[0], Sun.pos[0], X.pos[0]])
 sy = np.array([Earth.pos[1], Sun.pos[1], X.pos[1]])
@@ -50,5 +50,5 @@ for i in range(1, frame_count+1):
     sx[1], sy[1] = Sun.pos
     sx[2], sy[2] = X.pos
 
-animation1 = utils.Animate([Earth, Sun, X])
+animation1 = gravitation.Animate([Earth, Sun, X])
 animation1.draw(frame_count, fps, save=False)
